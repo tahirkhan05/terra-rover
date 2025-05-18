@@ -4,12 +4,17 @@ import time
 import numpy as np
 from queue import Queue, LifoQueue
 from config.settings import settings
-from models.object_detection import ObjectDetector
 from utils.logger import logger
 
 class StreamProcessor:
     def __init__(self):
-        self.object_detector = ObjectDetector(settings.OBJECT_DETECTION_MODEL)
+        self.object_detector = None
+        try:
+            from models.object_detection import ObjectDetector
+            self.object_detector = ObjectDetector(settings.OBJECT_DETECTION_MODEL)
+        except Exception as e:
+            logger.warning(f"Object detection disabled: {str(e)}")
+            
         self.detection_queue = LifoQueue(maxsize=10)  # Increased queue size for smoother output
         self.stop_event = threading.Event()
         self.processing_times = []
@@ -145,7 +150,13 @@ class StreamProcessor:
                         continue
                     
                     # Process the frame
-                    detections, annotated_frame = self.object_detector.detect_objects(frame)
+                    if self.object_detector is not None:
+                        # Use object detector if available
+                        detections, annotated_frame = self.object_detector.detect_objects(frame)
+                    else:
+                        # Just pass through the frame if no detector
+                        detections = []
+                        annotated_frame = frame
                     
                     # Calculate total latency from capture to completion
                     total_latency = (time.time() - timestamp) * 1000  # ms
