@@ -4,7 +4,6 @@
 
 ![Terra Rover](https://img.shields.io/badge/Terra%20Rover-v1.0-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-yellow)
 
 Terra Rover is an advanced real-time video analysis system that combines computer vision, speech recognition, and visual language modeling to process RTSP video streams, detect objects, and answer natural language questions about the visual scene.
 
