@@ -42,7 +42,7 @@ terra-rover/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/terra-rover.git
+git clone https://github.com/tahirkhan05/terra-rover.git
 cd terra-rover
 ```
 
