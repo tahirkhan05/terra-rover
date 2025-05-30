@@ -1,8 +1,8 @@
-# Terra Rover - Vision
+# Terra Rover - Vision 
 
-## Computer Vision and AI-Powered Real-Time Stream Analysis System
+## Computer Vision and AI-Powered Real-Time Stream Analysis System Integrated with AWS Services
 
-Terra Rover is an advanced real-time video analysis system that combines computer vision, speech recognition, and visual language modeling to process RTSP video streams, detect objects, and answer natural language questions about the visual scene.
+Terra Rover is an advanced real-time video analysis system integrated with AWS services that combines computer vision, speech recognition, and visual language modeling to process RTSP video streams, detect objects, and answer natural language questions about the visual scene.
 
 ## 🌟 Features
 
@@ -10,7 +10,7 @@ Terra Rover is an advanced real-time video analysis system that combines compute
 - **Voice Interaction**: Ask questions about what the system sees using natural speech
 - **Visual Language Model Integration**: Processes frames with Claude 3 Sonnet for intelligent scene analysis
 - **High-Performance Architecture**: Optimized for low-latency, high-throughput video processing
-- **AWS Integration**: Scalable cloud storage and AI processing capabilities
+- **AWS Integration**: Scalable cloud storage and AI processing capabilities, services used bedrock, lex, s3.
 - **Multi-threaded Processing**: Parallel task execution for smooth performance
 
 ## 🛠️ System Architecture
