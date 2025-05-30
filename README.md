@@ -56,7 +56,13 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Configure AWS credentials
+### 4: Install PyTorch with CUDA Support
+
+```bash
+pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+```
+
+### 5. Configure AWS credentials
 
 Create an `.env` file in the project root directory and add your AWS credentials:
 
@@ -100,7 +106,7 @@ DETECTION_CONF_THRESHOLD=0.25
 IOU_THRESHOLD=0.45
 ```
 
-### 5. Set up AWS resources
+### 6. Set up AWS resources
 
 1. Create an S3 bucket named `terra-rover-bucket` (or update the name in your `.env` file)
 2. Configure Amazon Lex bot for speech processing
