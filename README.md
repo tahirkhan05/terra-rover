@@ -8,6 +8,8 @@ Terra Rover is an advanced real-time video analysis system integrated with AWS s
 
 https://github.com/user-attachments/assets/61def2b5-9411-4005-b772-33d43988757c
 
+![Image](https://github.com/user-attachments/assets/bea65409-b587-4f6d-aa1c-4d6a06f02ec1)
+
 ## 🌟 Features
 
 - **Real-Time Object Detection**: Uses YOLO11s for efficient, accurate object detection in video streams
